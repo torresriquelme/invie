@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Invie - Precios</title>
+	<link rel="stylesheet" href="css/invie_styles.css"/>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:700,400|Allerta' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<section id="portada" class="portada">
+	<header id="header" class="header contenedor">  <!-- header -->
+		<figure class="logotipo">
+			<img src="images/invie.png" class="logo" width="186" alt="Logo de Invie"/>
+		</figure>
+		<nav class="menu">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html#guitarras">Guitarras</a></li>
+				<li><a href="precios.html">Precios</a></li>
+			</ul>
+		</nav>
+	</header> 
+</section>
+
+	
+	<section class="tabla">
+		<div class="contenedor">
+			<table>
+				<thead>
+					<tr>
+						<th>Modelo</th>
+						<th>Precio</th>
+						<th>Descripción</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Invite classic</td>
+						<td>USD 950</td>
+						<td>Ideal para inicar tu carrera como rock star</td>
+					</tr>
+					<tr>
+						<td>Invite acustica</td>
+						<td>USD 1.343</td>
+						<td>Construida a mano por expertos guitarreros de la Patagonia Francesa</td>
+					</tr>
+					<tr>
+						<td>Invite custom</td>
+						<td>USD 1.630</td>
+						<td>Fabricamos una guitarra a tu medida con el logo de tu banda</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="contenedor">
+			<div class="contacto">
+				<img src="images/invie-white.png" alt="Logo blanco"/>
+				<a href="tel:+582617784532"><strong>Teléfono</strong><span>58-2617785435</span></a>
+				<a href="mailto:torres.riquelme@gmail.com"><strong>Email</strong><span>torres.riquelme@gmail.com</span></a>
+			</div>
+			<from class="formulario">
+				<div class="formulario-col1">
+					<label for="nombre">Nombre</label>
+					<input type="text" name="" required id="nombre" name="nombre" />
+					<label for="email">E-mail</label>
+					<input type="email" name="" required id="email" name="email" />
+					<div class="sexo">
+						<label for="mujer">
+							<input type="radio" id="mujer" name="sexo" checked value="mujer">Mujer</label>
+						</label>
+						<label for="hombre">
+							<input type="radio" id="hombre" name="sexo" value="hombre">Hombre</label>
+						</label>
+					</div>
+					<div class="intereses">
+						<div class="intereses-columna1">
+							<label for="cotizacion">
+								<input type="checkbox" id="cotizacion" name="intereses" checked value="cotizacion">Cotización
+							</label>
+							<label for="reclamos">
+								<input type="checkbox" id="reclamos" name="intereses" value="reclamos">Reclamos
+							</label>
+						</div>
+						<div class="intereses-columna2">
+							<label for="comentarios">
+								<input type="checkbox" id="comentarios" name="intereses" value="comentarios">Comentarios
+							</label>
+							<label for="otros">
+								<input type="checkbox" id="otros" name="intereses" value="otros">Otros
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="formulario-col2">
+					<label for="mensaje">Su mensaje</label>
+					<textarea name="mensaje" id="mensaje" cols="30" rows="7"></textarea>
+					<input type="submit" value="Enviar" name="datos" class="button"/>
+				</div>
+			</from>
+		</div>
+	</footer>
+
+</body>
+</html>
