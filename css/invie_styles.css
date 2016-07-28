@@ -60,9 +60,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', end
 }
 
 .contenedor{
-	width: 1160px;
+	max-width: 800px;
   margin: auto;
-  padding-bottom: 40px;
 }
 
 .header{
@@ -235,4 +234,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', end
 .sexo, .intereses {
 	margin-bottom: 10px;
 	margin-top: 25px;
+}
+
+
+/* portada */
+@media screen and (max-width: 900px) {
+	.titulo {
+		font-size: 45px;
+		margin-top: 30px;
+	}
+	.title-a {
+		font-size: 18px;
+	}
+	.portada {
+		height: auto;
+	}
+	.portada .button {
+		margin-bottom: 30px;
+		display: inline-block;
+	}
+	/* portada */
+
+	/* guitarras */
+	.guitarras {
+		text-align: center;
+	}
+	.izquierda, .derecha {
+		float: none;
+		position: static;
+	}
+	.title-b {
+		margin: 0;
+	}
+	.guitarra li {
+		list-style: none;
+	}
+	.guitarra.b {
+		height: auto;
+	}
+	.contenedor-guitarra-b {
+		position: static;
+		margin: 0;
+	}
+
+	/*guitarras */
 }
