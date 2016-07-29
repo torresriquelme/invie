@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Invie - web de práctica</title>
 		<link rel="stylesheet" href="css/invie_styles.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no"/>
 		<!-- <link rel="stylesheet" type="text/css" media="(max-width: 800px)" href="css/media-querie.css"> -->
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:700,400|Allerta' rel='stylesheet' type='text/css'>
 	</head>
@@ -15,7 +16,8 @@
 				<figure class="logotipo">
 					<img src="images/invie.png" class="logo" width="186" alt="Logo de Invie"/>
 				</figure>
-				<nav class="menu">
+				<span class="burguer-button icon-menu" id="burguer-button"></span>
+				<nav class="menu" id="menu">
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="#guitarras">Guitarras</a></li>
@@ -106,5 +108,13 @@
 				</from>
 			</div>
 		</footer>
+		<script type="text/javascript">
+			var $burguerButton = document.getElementById('burguer-button');
+			var $menu = document.getElementById('menu');
+			$burguerButton.addEventListener('touchstart', toggleMenu);
+			function toggleMenu() {
+				$menu.classList.toggle('active');
+			}
+		</script>
 	</body>
 </html>
