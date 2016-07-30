@@ -14,7 +14,7 @@
 		<section id="portada" class="portada">   <!-- portada -->
 			<header id="header" class="header contenedor">  <!-- header -->
 				<figure class="logotipo">
-					<img src="images/invie.png" class="logo" width="186" alt="Logo de Invie"/>
+					<img src="images/invie.png" srcset="images/invie.png 1x, images/invie-white.png 2x" class="logo" width="186" alt="Logo de Invie"/>
 				</figure>
 				<span class="burguer-button icon-menu" id="burguer-button"></span>
 				<nav class="menu" id="menu">
@@ -34,6 +34,9 @@
 
 		<section id="guitarras" class="guitarras contenedor">  <!-- guitarras -->
 			<h2>Nuestras Guitarras</h2>
+			<div class="video-responsive-contenedor">
+				<iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/hXS2N8dzQhM" frameborder="0" allowfullscreen></iframe>
+			</div>
 			<article class="guitarra">
 				<img data-src="images/invie-acustica.png" class="derecha" width="350" alt="guitarrista 1"/>
 				<div class="contenedor-guitarra-a">
@@ -109,6 +112,7 @@
 			</div>
 		</footer>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 		<script type="text/javascript">
 			var cosulta = window.matchMedia('(max-width: 500px)');
 			var $burguerButton = document.getElementById('burguer-button');
@@ -127,9 +131,22 @@
 			function toggleMenu() {
 				$menu.classList.toggle('active');
 			}
+			function showMenu() {
+				$menu.classList.add('active');
+				console.log('showMenu function');
+			}
+			function hideMenu() {
+				$menu.classList.remove('active');
+				console.log('hideMenu function');
+			}
 			var bLazy = new Blazy({
     		selector: 'img'
 			});
+			//gestos touch
+			var $body = document.body;
+			var gestos = new Hammer($body);
+			gestos.on('swipeleft', hideMenu);
+			gestos.on('swiperight', showMenu);
 		</script>
 	</body>
 </html>

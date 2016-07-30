@@ -142,6 +142,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', end
 }
 
 .portada{
+	background-color: #466173;
 	background-image: url("../images/background.png");
 	background-size: cover;
 	color: white;
@@ -295,6 +296,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', end
 
 /* portada */
 @media screen and (max-width: 900px) {
+	.tabla {
+		margin: 50px 20px;
+	}
+	.tabla .contenedor {
+		overflow: auto;
+		border: 1px solid #273b47;
+	}
 	.titulo {
 		font-size: 45px;
 		margin-top: 30px;
@@ -396,6 +404,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', end
 	.portada .contenedor {
 		position: static;
 	}
+	.header {
+		position: static;
+	}
+	.header .contenedor {
+		position: static;
+	}
 	.menu {
 		background: rgba(255, 60, 88, .8);
 		position: absolute;
@@ -442,5 +456,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', end
 	}
 	.title-b {
 		font-size: 30px;
+	}
+}
+
+.video-responsive-contenedor {
+	position: relative;
+	padding-top: 56.25%;
+}
+
+.video-responsive-src {
+	position: absolute;
+	left: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+	.portada {
+		/*colocar aqui la ruta de una imagen 2x*/
+		background-image: url('../images/background.png');
 	}
 }
