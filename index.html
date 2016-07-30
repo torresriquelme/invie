@@ -35,7 +35,7 @@
 		<section id="guitarras" class="guitarras contenedor">  <!-- guitarras -->
 			<h2>Nuestras Guitarras</h2>
 			<article class="guitarra">
-				<img src="images/invie-acustica.png" class="derecha" width="350" alt="guitarrista 1"/>
+				<img data-src="images/invie-acustica.png" class="derecha" width="350" alt="guitarrista 1"/>
 				<div class="contenedor-guitarra-a">
 					<h3 class="title-b">Invie Acústica</h3>
 					<ol>
@@ -46,7 +46,7 @@
 				</div>
 			</article>
 			<article class="guitarra">
-				<img src="images/invie-classic.png" class="izquierda" width="350" alt="guitarrista 2"/>
+				<img data-src="images/invie-classic.png" class="izquierda" width="350" alt="guitarrista 2"/>
 				<div class="contenedor-guitarra-b">
 					<h3 class="title-b">Invie Classic</h3>
 					<ol>
@@ -63,7 +63,7 @@
 		<footer class="footer">
 			<div class="contenedor">
 				<div class="contacto">
-					<img src="images/invie-white.png" alt="Logo blanco"/>
+					<img data-src="images/invie-white.png" alt="Logo blanco"/>
 					<a href="tel:+582617784532"><strong>Teléfono</strong><span>58-2617785435</span></a>
 					<a href="mailto:torres.riquelme@gmail.com"><strong>Email</strong><span>torres.riquelme@gmail.com</span></a>
 				</div>
@@ -108,13 +108,28 @@
 				</from>
 			</div>
 		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js"></script>
 		<script type="text/javascript">
+			var cosulta = window.matchMedia('(max-width: 500px)');
 			var $burguerButton = document.getElementById('burguer-button');
 			var $menu = document.getElementById('menu');
-			$burguerButton.addEventListener('touchstart', toggleMenu);
+			mediaQuery();
+			cosulta.addListener(mediaQuery);
+			function mediaQuery() {
+				if(cosulta.matches) {
+					console.log('max-width es menor que 500px');
+					$burguerButton.addEventListener('touchstart', toggleMenu);
+				}else {
+					$burguerButton.removeEventListener('touchstart', toggleMenu);
+					console.log('max-width es mayor que 500px');
+				}
+			}
 			function toggleMenu() {
 				$menu.classList.toggle('active');
 			}
+			var bLazy = new Blazy({
+    		selector: 'img'
+			});
 		</script>
 	</body>
 </html>
